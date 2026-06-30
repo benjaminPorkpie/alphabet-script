@@ -15,7 +15,7 @@ This script works on Linux, macOS and Windows, but the setup was designed for Li
 
 ## Requirements
 
-- Python 3.14
+- Python 3
 - simpleaudio Python library
 
 ## Setup
