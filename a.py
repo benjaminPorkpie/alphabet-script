@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import string
 import json
 import sys
 import simpleaudio as sa
@@ -42,8 +43,7 @@ elif args.settings == "nice":
     print(f"\n{new_data}\n")
     exit()
 
-alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-
+alphabet = list(string.ascii_lowercase)
 
 # bold red, green, reset
 BR = "\033[1;31m"
@@ -88,7 +88,7 @@ def setup():
         clear_lines(2)
         nice()
     else:
-        print(f"{R}Error:{RE} Please restart the script.")
+        print(f"{BR}Error:{RE} Please restart the script.")
 
 def basic():
     pos = 0
@@ -113,10 +113,9 @@ def basic():
 def nice():
     pos = 0
 
+    yay_sound = sa.WaveObject.from_wave_file(str(wav_path))
+
     while True:
-
-        yay_sound = sa.WaveObject.from_wave_file(str(wav_path))
-
         pos += 1
         previous_letter = alphabet[pos - 1]
 
