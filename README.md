@@ -9,6 +9,9 @@ There's 2 styles to choose from, *Basic*, and *Nice*. *Basic* is the minimal way
 
 If you follow the **Setup** guide, you can make this into a command, so when you type "a" in your terminal, it will tell you to finish the alphabet.
 
+You can add a --settings argument, either **basic**, or **nice**.
+You can do -h or --help to view this later.
+
 ## Compatability
 
 This script works on Linux, macOS and Windows, but the setup was designed for Linux, so the setup may not work on other operating systems.
@@ -73,7 +76,6 @@ We create a link from ~/.local/bin/a to point to ~/.a/a:
 This script uses the simpleaudio library, so we install it:
 
 `python3 -m pip install simpleaudio`
-
 
 ## License
 
